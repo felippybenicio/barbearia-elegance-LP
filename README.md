@@ -1,2 +1,2 @@
-# barbearia-elegance-LP
-Landing Page
+# landingpage-barbearia-elegance
+landingpage-generico

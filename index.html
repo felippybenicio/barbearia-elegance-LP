@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Elegance</title>
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="ico">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="estilo/desktop.css" media="screen and (min-width: 1024px)">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Farsan&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header1"></div>
+        <h1>Barbearia Elegance</h1>
+        <h2>Estilo, tradição e cuidado em cada detalhe</h2>
+        <p>Sua experiência premium em cortes e barba.</p>
+        <a class="acao" href="#"><strong>Agende seu horário</strong></a>
+    </header>
+    <main data-aos="fade-down">
+        <div id="main1"></div>
+        <!-- Sobre -->
+        <section id="sobre" data-aos="fade-up">
+            <h2>Sobre Nós</h2>
+            <p>
+            A Barbearia Elegance é referência em cortes clássicos e modernos, oferecendo um atendimento exclusivo 
+            e um ambiente acolhedor para quem valoriza estilo e bem-estar.
+            </p>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" data-aos="flip-right">
+            <h2>Nossos Serviços</h2>
+            
+            <div id="catalogo">
+                <!-- <p id="plano">plano:</p> -->
+                <div class="planos">
+                    <button class="plano" id="unitario">Unitário</button>
+                    <button class="plano" id="mensal">Mensal</button>
+                </div>
+
+                <div class="servicos">
+                    <p class="tipo">Corte Masculino</p>
+                    <p class="valorUnitario">R$35,90</p>
+                    <p class="valorMensal">R$30,90</p>
+                </div>
+                <div class="servicos">
+                    <p class="tipo">Barba Tradicional</p>
+                    <p class="valorUnitario">R$30,90</p>
+                    <p class="valorMensal">R$25,90</p>
+                </div>
+                <div class="servicos">
+                    <p class="tipo">Hidratação Capilar</p>
+                    <p class="valorUnitario">R$50,00</p>
+                    <p class="valorMensal">R$40,00</p>
+                </div>
+                <div class="servicos">
+                    <p class="tipo">Design de Sobrancelha</p>
+                    <p class="valorUnitario">R$10,00</p>
+                    <p class="valorMensal">Inclusa</p>
+                </div>
+                <div class="servicos">
+                    <p class="tipo">Pacote Completo (Corte + Barba)</p>
+                    <p class="valorUnitario">R$50,00</p>
+                    <p class="valorMensal">R$40,00</p>
+                </div>
+            </div>
+           
+        </section>
+        <div id="main3" fade-right></div>
+        <!-- Depoimentos -->
+        <section id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <div id="depoimento1" class="depoimento" data-aos="fade-right">
+                <img class="pessoas" src="imagem/pessoa1.jpg" alt="">
+                <p class="nomeDepoimento"><strong>João S.</strong><br>@joaosousa</p>
+                <p class="avaliacao">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela"><img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela"><img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela">
+                    <img src="imagem/estrela-vazia.png" alt="estrela vazia" class="estrela">
+                </p>
+                <p>"Melhor barbearia da cidade! Atendimento impecável." <br><br> há 14 horas</p>
+                <p class="interacao"><img src="imagem/coracao.png" alt="coracao">50 <img src="imagem/comentario.png" alt="comentario">39 </p>
+            </div>
+            <div id="depoimento2" class="depoimento" data-aos="fade-left">
+                <img class="pessoas" src="imagem/pessoa2.jpg" alt="">
+                <p class="nomeDepoimento"><strong>Carlos M.</strong><br>@carlosmota</p>
+                <p class="avaliacao">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela"><img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela"><img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela">
+                </p>
+                <p>"Ambiente incrível e profissionais de qualidade." <br><br> 2 semanas atrás</p>
+                <p class="interacao"><img src="imagem/coracao.png" alt="coracao">86 <img src="imagem/comentario.png" alt="comentario">44 </p>
+            </div>
+            <div id="depoimento3" class="depoimento" data-aos="fade-right">
+                <img class="pessoas" src="imagem/pessoa3.jpg" alt="">
+                <p class="nomeDepoimento"><strong>Felipe R.</strong><br>@feliperei</p>
+                <p class="avaliacao">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela"><img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela">
+                    <img src="imagem/estrela-cheia.png" alt="estrela-cheia" class="estrela"><img src="imagem/estrela-vazia.png" alt="estrela vazia" class="estrela">
+                    <img src="imagem/estrela-vazia.png" alt="estrela vazia" class="estrela">
+                </p>
+                <p>"Sempre volto e recomendo para todos!" <br><br> há 3 dias</p>
+                <p class="interacao"><img src="imagem/coracao.png" alt="coracao">92 <img src="imagem/comentario.png" alt="comentario">48</p>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria">
+            <h2>Nosso Portfólio</h2>
+            <div id="galeria-grid">
+                <img src="imagem/corte1.jpg" alt="Corte de cabelo 1" data-aos="zoom-in">
+                <img src="imagem/corte2.jpg" alt="Corte de cabelo 2" data-aos="zoom-in">
+                <img src="imagem/corte3.jpg" alt="Corte de cabelo 3" data-aos="zoom-in">
+                <img src="imagem/barba1.jpg" alt="Barba 1" data-aos="zoom-in">
+                <img src="imagem/barba2.jpg" alt="Barba 2" data-aos="zoom-in">
+            </div>
+        </section>
+
+        <!-- Agendamento -->
+        <section id="contato">
+            <h2>Agende seu horário</h2>
+            <p>Estamos prontos para cuidar do seu estilo.</p>
+            <a id="acaoContato" class="acao" href="https://wa.me/SEUNUMERO" target="_blank"><strong>Agendar agora</strong></a>
+        </section>
+    </main>
+    <!-- Rodapé -->
+    <div id="linha"></div>
+    <footer>
+        <nav>
+            <a href="#"><i class="fa-brands fa-whatsapp logo"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram logo"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook logo"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter logo"></i></a>
+        </nav>
+        <a id="localizacao" href="#"><i class="fa-solid fa-location-dot"></i> Rua Exemplo, 123 - Centro, São Paulo - SP</a>
+        <p><i class="fa-solid fa-clock"></i> Seg a Sáb: 9h - 20h</p>
+        <p><i class="fa-solid fa-phone"></i> (11) 99999-9999</p>
+        <p>&copy; 2025 Barbearia Elegance - Todos os direitos reservados.</p>
+        <p id="noirsystems">&copy;NoirSystems-2025, contato: 11 93320-8464</p>
+    </footer>
+
+    <script src="script.js"></script>
+        <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 2500 }); // duração da animação em ms
+    </script>
+</body>
+</html>

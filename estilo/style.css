@@ -1,0 +1,457 @@
+:root {
+    --priciapal: #616161a9;
+    --textos: #d4cdcd;
+    --detalhesAzul: #008cff;
+    --detalhesVermelho: #ce1818;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'roboto';
+}
+
+body {
+    background-color: #111;
+    color: var(--textos);
+    overflow-x: hidden;
+}
+
+header {
+    height: 50dvh;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+div#header1 {
+    background: url(../imagem/header-cll.png) center center no-repeat;
+    height: 98%;
+    width: 299px;
+    position: absolute;
+    right: -18px;
+    top: -59px;
+    z-index: -1;
+}
+
+h1 {
+    font-family: "Courgette", cursive;
+    color: var(--detalhesAzul);
+    margin: 50px;
+    padding: 5px;
+    border: 1px solid var(--detalhesAzul);
+    border-left: none;
+    border-right: none;
+    text-shadow: 0px 0px 10px var(--priciapal),
+                 0px 0px 30px var(--priciapal);
+}
+
+header h2 {
+    margin-bottom: 50px;
+}
+
+header p {
+    margin-bottom: 100px;
+}
+
+a.acao {
+    color: var(--detalhesAzul);
+    font-size: 1.2em;
+    border: 5px solid var(--detalhesAzul);
+    border-radius: 15px;
+    padding: 15px;
+    text-decoration: none;
+    text-shadow: 0px 0px 30px var(--detalhesAzul),
+                0px 0px 50px var(--detalhesAzul);
+    box-shadow: 0px 0px 30px var(--detalhesAzul), 
+                inset 0px 0px 30px var(--detalhesAzul);
+    position: relative;
+    z-index: 0;
+}
+
+.acao::before {
+    
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: var(--detalhesAzul);
+    width: 100%;
+    height: 100%;
+    transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
+    filter: blur(64px);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.acao::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 128px 32px var(--detalhesAzul);
+    opacity: 0;
+    background-color: var(--detalhesAzul);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.acao:hover::before, #acao:hover::after {
+    opacity: 1;
+}
+
+.acao:hover {
+    background-color: var(--detalhesAzul);
+    color: #111;
+}
+
+main {
+    margin: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+main h2 {
+    font-family: "Farsan", cursive;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+div#main1 {
+    background: url(../imagem/main1-cll.png) center center no-repeat;
+    height: 487px;
+    width: 300px;
+    position: absolute;
+    right: -16px;
+    top: 10px;
+    z-index: -2;
+}
+
+section {
+    margin: 20px;
+}
+
+section#sobre {
+    background-color: var(--priciapal);
+    padding: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0px 0px 10px var(--priciapal),
+                0px 0px 15px var(--priciapal);
+}
+
+#sobre h2 {
+    margin-left: 0px;
+}
+
+section#servicos {
+    padding: 25px 0px;
+}
+
+div#catalogo {
+    border: 2px solid var(--priciapal);
+    border-top: 60px solid var(--priciapal); 
+    padding: 15px;
+    margin: auto;
+    width: 320px;
+    position: relative;
+}
+
+div.planos {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    display: flex;
+    gap: 15px;
+    position: relative;
+    margin-top: 80px;
+    justify-content: center;
+    position: absolute;
+    top: -131px;
+    right: 15px;
+}
+
+button.plano {
+    z-index: 0;
+    background-color: #111;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--textos);
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    position: relative;
+    transition: all .3s ease;
+}
+
+/* fundo preto padrão */
+button.plano::after {
+  z-index: -1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  background-color: #111;
+  position: absolute;
+  transition: all .3s ease;
+}
+
+/* efeito brilho no hover */
+button.plano:hover::before {
+  opacity: 1;
+}
+
+@keyframes brilhar {
+  50% {
+    background-position: 500% 0;
+  }
+}
+
+/* camada de brilho */
+button.plano::before {
+  content: '';
+  background: linear-gradient(
+      45deg, var(--detalhesAzul), var(--textos), var(--detalhesVermelho), var(--priciapal)
+  );
+  top: -2px;
+  left: -2px;
+  background-size: 500%;
+  z-index: -1;
+  filter: blur(10px);
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  animation: brilhar 10s linear infinite;
+  opacity: 0;
+  border-radius: inherit;
+  position: absolute;
+  transition: opacity .4s ease;
+}
+
+/* estilo do botão selecionado */
+button.plano.selecionado {
+  color: #fff;
+  font-weight: 600;
+}
+
+button.plano.selecionado::after {
+  background: linear-gradient(
+    45deg, var(--detalhesAzul), var(--textos), var(--detalhesVermelho), var(--priciapal)
+  );
+}
+
+button.plano.selecionado::before {
+  opacity: 1;
+  animation-duration: 40s;
+}
+
+
+div.servicos {
+    border-bottom: 1px solid var(--textos);
+    padding: 5px 0px;
+}
+
+p.tipo {
+    display: inline-block;
+    width: 140px;
+}
+
+p.valorMensal {
+    display: none;
+}
+
+.valorMensal, .valorUnitario {
+    display: inline-block;
+    margin-left: 75px;
+    width: 60px;
+}
+
+div.depoimento {
+    background-color: var(--priciapal);
+    padding: 25px;
+    margin: 15px auto;
+    border-radius: 15px;
+    height: 130px;
+    width: 250px;
+    position: relative;
+    z-index: 0;
+}
+
+.depoimento::before {
+    
+    content: '';
+    position: absolute;
+    top: 116px;
+    left: 0;
+    background-color: var(--priciapal);
+    width: 100%;
+    height: 100%;
+    transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
+    filter: blur(64px);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.depoimento::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 128px 32px var(--priciapal);
+    opacity: 0;
+    background-color: var(--priciapal);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+div#depoimento1 {
+    rotate: 15deg;
+    margin: 35px auto;
+}
+
+#depoimento2 {
+    rotate: -5deg;
+    margin: 50px auto;
+}
+
+#depoimento3 {
+    rotate: 10deg;
+    margin-bottom: 100px;
+}
+
+img.pessoas {
+    width: 35px;
+    height: 35px;
+    background-color: #111;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+p.nomeDepoimento {
+    color: gray;
+    display: inline-block;
+    margin: 0px 0px 0px 5px;
+}
+
+.nomeDepoimento strong {
+    color: var(--textos);
+}
+
+p.avaliacao {
+    display: inline;
+    margin-left: 23px;
+}
+
+img.estrela {
+    width: 15px;
+}
+
+div p {
+    margin: 15px 0px;
+}
+
+p.interacao {
+    position: absolute;
+    right: 40px;
+    bottom: 11px;
+}
+
+.interacao img {
+    width: 20px;
+}
+
+section#galeria {
+    background: url(../imagem/main2-cll.png) center center no-repeat;
+    background-size: cover;
+    margin: 0px;
+    width: 100%;
+}
+
+#galeria h2 {
+    margin:  5px 25px;
+}
+
+div#galeria-grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#galeria-grid img {
+    width: 165px;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: 1px solid var(--priciapal);
+    box-shadow: 2px 3px 3px #00000042;
+}
+
+section#contato {
+    margin: auto;
+    padding: 115px 25px;
+    text-align: center;
+}
+
+#contato p {
+    margin-bottom: 50px;
+}
+a#acaoContato {
+    margin: 80px;
+}
+
+footer {
+    padding: 25px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+div#linha {
+    border-top: 1px solid var(--textos);
+    box-shadow: inset 0px 0px 10px var(--textos),
+                inset 0px 0px 20px var(--textos),
+                0px 0px 10px var(--textos),
+                0px 0px 20px var(--textos);
+    margin: 0px 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+i.logo {
+    color: var(--textos);
+    font-size: 1.3em;
+    margin: 20px 3px;
+}
+
+a#localizacao {
+    color: var(--textos);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.logo:hover, #localizacao:hover {
+    text-shadow: 
+                0px 0px 10px var(--textos),
+                0px 0px 20px var(--textos);
+    
+}
+
+#localizacao:hover {
+    text-decoration: underline;
+}
+
+p#noirsystems {
+    background-color: #111;
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: px;
+    text-align: center;
+}

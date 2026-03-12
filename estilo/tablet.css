@@ -1,0 +1,85 @@
+h1 {
+    font-size: 3em;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    position: relative;
+    
+}
+
+main h2 {
+    font-size: 2.1em;
+}
+
+div#main1 {
+    background-size: cover;
+    margin-top: 115px;
+    width: 490px;
+    height: 730px;
+}
+
+div#main3 {
+    width: 676px;
+    height: 643px;
+    background: url(../imagem/main3.png) center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 495px;
+    left: -60px;
+    z-index: -1;
+}
+
+section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+section#sobre {
+    width: 320px;
+}
+
+section#servicos {
+    align-self: flex-end;
+    margin-right: 50px;
+}
+
+section#depoimentos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#depoimentos h2 {
+    margin: 0px 250px 8px 250px;
+}
+
+div#depoimento1, #depoimento2, #depoimento3 {
+    margin: 30px;
+    display: inline-block;
+}
+
+section#galeria {
+    height: 635px;
+}
+
+div#galeria-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 85px 0px;
+}
+
+#galeria-grid img {
+    width: 250px;
+    margin: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#galeria-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 6px 5px #00000042;
+
+}

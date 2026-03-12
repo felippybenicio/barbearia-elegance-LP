@@ -1,0 +1,143 @@
+body {
+    cursor: url('../imagem/tesoura-branco.png'), auto;
+}
+
+header {
+    height: 100dvh;
+}
+
+header > a.acao {
+    margin-top: 500px;
+    
+}
+
+a.acao {
+    cursor: url('../imagem/tesoura-preto.png'), auto;
+}
+
+header p {
+    margin-bottom: 290px;
+}
+
+div#header1 {
+    background: url(../imagem/header-desktop.png) center center no-repeat;
+    height: 735px;
+    width: 500px;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 150px;
+}
+
+header h2 {
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+div#main1 {
+    width: 580px;
+    height: 830px;
+}
+
+div#main3 {
+        width: 818px;
+        height: 760px;
+}
+
+main h2 {
+    font-size: 2.4em;
+}
+
+main p {
+    font-size: 1.1em;
+}
+
+section {
+    max-width: 1024px;
+}
+
+section#sobre {
+    margin-right: 600px;
+}
+
+section#servicos {
+    margin: 120px 0px;
+    margin-right: 160px;
+}
+
+div#catalogo {
+    width: 400px;
+}
+
+button.plano {
+    cursor: url('../imagem/tesoura-branco.png'), auto;
+}
+
+@media screen and (min-width: 1355px) {
+    section#servicos {
+        margin-right: 350px;
+    }
+}
+
+div.depoimento p {
+    font-size: initial;
+}
+
+section#galeria {
+    background: url(../imagem/main2-desktop.png) center center no-repeat;
+    background-size: cover;
+    max-width: 100dvw;
+    height: 1250px;
+
+}
+
+#galeria h2 {
+    margin: 200px 0px -200px 80px;
+}
+
+div#galeria-grid {
+    padding: 260px 0px;
+    width: 1020px;
+    margin: auto;
+}
+
+#galeria-grid img {
+    width: 307px;
+}
+
+footer {
+    padding: 25px 120px;
+}
+
+div#linha {
+    margin: 0px 120px;
+}
+
+nav {
+    align-self: flex-end;
+}
+
+nav i.logo {
+    font-size: 1.6em;
+}
+
+footer p, footer a {
+    font-size: 1.2em;
+    width: 416px;
+    align-self: flex-start;
+    text-align: center;
+}
+
+#noirsystems {
+    align-self: center;
+}
